@@ -148,4 +148,9 @@ class PagesController extends AppController {
 		}
 	}
 
+	public function contacts(){
+		$title_for_layout = "Контакты";
+		$this->set(compact('title_for_layout'));
+	}
+
 }

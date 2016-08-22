@@ -30,8 +30,8 @@
 						<li class="menu__item">
 							<a href="news.html">Новости</a>
 						</li>
-						<li class="menu__item <?= (isset($this->request->params['pass'][0]) && $this->request->params['pass'][0]=='contacts')? "menu__item--active" : "" ?>">
-							<a href="/<?$lang?>page/contacts">Контакты</a>
+						<li class="menu__item <?= ($this->request->params['controller']=='pages' && $this->request->params['action']=='contacts')? "menu__item--active" : "" ?>">
+							<a href="/<?$lang?>contacts">Контакты</a>
 						</li>								
 					</ul>
 				</nav>

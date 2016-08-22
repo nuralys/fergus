@@ -20,8 +20,8 @@
 		array('controller' => 'categories', 'action' => 'index'),
 		array('language' => '[a-z]{2}')
 	);
-	Router::connect('/:language/service/view/*', 
-		array('controller' => 'services', 'action' => 'view'),
+	Router::connect('/:language/contacts', 
+		array('controller' => 'pages', 'action' => 'contacts'),
 		array('language' => '[a-z]{2}')
 	);
 	Router::connect('/:language/news/view/*', 
@@ -43,7 +43,7 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/category/*', array('controller' => 'categories', 'action' => 'index'));
-	Router::connect('/marks/*', array('controller' => 'marks', 'action' => 'index'));
+	Router::connect('/contacts', array('controller' => 'pages', 'action' => 'contacts'));
 	Router::connect('/product/*', array('controller' => 'products', 'action' => 'view'));
 	Router::connect('/page/*', array('controller' => 'pages', 'action' => 'page'));
 	Router::connect('/service/view/*', array('controller' => 'services', 'action' => 'view'));

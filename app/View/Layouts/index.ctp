@@ -7,6 +7,7 @@
 		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1">
 	</head>
 	<body>
+		<div class="wrapper">
 		<?php echo $this->element('header'); ?>
 		<main class="main">
 			<?php echo $this->Session->flash('good'); ?>
@@ -14,5 +15,8 @@
 			<?php echo $this->fetch('content'); ?>
 		</main>
 		<?php echo $this->element('footer'); ?>
+		</div>
+		<script src="/js/jquery-3.0.0.min.js"></script>
+		<script src="/js/script.js"></script>
 	</body>
 </html>

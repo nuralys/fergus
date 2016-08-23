@@ -20,7 +20,7 @@
 			<li class="production-list__item">
 				<a href="#">
 					<figure class="production-image">
-						<img src="img/zern_cultrure.png" class="production-image__img">
+						<img src="img/zern_cultrure.jpg" class="production-image__img">
 					</figure>
 				</a>
 				<div class="production-maintext">
@@ -33,7 +33,7 @@
 			<li class="production-list__item">
 				<a href="#">
 					<figure class="production-image">
-						<img src="img/masl_cultrure.png">
+						<img src="img/masl_cultrure.jpg">
 					</figure>
 				</a>
 				<div class="production-maintext">
@@ -46,7 +46,7 @@
 			<li class="production-list__item">
 				<a href="#">
 					<figure class="production-image">
-						<img src="img/bob_cultrure.png">
+						<img src="img/bob_cultrure.jpg">
 					</figure>
 				</a>
 				<div class="production-maintext">

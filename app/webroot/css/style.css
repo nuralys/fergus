@@ -290,7 +290,7 @@ footer {
 }
 .up-header__logo {
   float: left;
-  width: 240px;
+  width: 223px;
   padding-top: 8px;
 }
 .up-header__right-part {
@@ -751,31 +751,17 @@ footer {
   top: 0;
   margin-top: -44px;
 }
-.news-part {
+.news-ul {
   overflow: hidden;
+  margin-right: -2.2%;
 }
-.news-part__news {
+.news-li {
   float: left;
-  width: 67%;
-  margin-right: 3%;
+  width: 33.3%;
 }
-.news-part__aside {
-  float: left;
-  width: 30%;
-}
-.big-news {
-  margin-bottom: 25px;
-}
-.big-news__item {
-  overflow: hidden;
-  margin-bottom: 25px;
-}
-.big-news__item:last-child {
-  margin-bottom: 0;
-}
-.news-text {
-  float: left;
-  width: 56%;
+.news-li__inner {
+  margin-right: 6%;
+  margin-bottom: 30px;
 }
 .news-text__heading {
   color: #3d3d3d;
@@ -794,47 +780,12 @@ footer {
 .news-figure {
   border: 2px solid #ff9902;
   overflow: hidden;
+  margin-right: 2px;
   border-radius: 5px;
-  float: left;
-  width: 40%;
-  margin-right: 3%;
   height: 200px;
 }
 .news-figure img {
   width: 100%;
-}
-.news-list {
-  padding-left: 10px;
-  margin-top: 5px;
-}
-.news-list__item {
-  margin-bottom: 12px;
-  font-size: 14px;
-  line-height: 18px;
-}
-.news-list__item a {
-  color: #565656;
-}
-.news-list__item:hover {
-  text-decoration: underline;
-}
-.news-list__item:before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  display: inline-block;
-  border-radius: 50%;
-  position: relative;
-  top: -3px;
-  margin: 0 7px 0 5px;
-  background-color: #78b007;
-}
-.news-aside {
-  background-color: #ffeed4;
-  margin-bottom: 30px;
-  border-radius: 2px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.33);
-  padding: 25px 20px 6px 20px;
 }
 .news-content {
   margin-bottom: 25px;
@@ -859,8 +810,21 @@ footer {
   float: left;
   width: 50%;
   height: 300px;
-  border: 1px solid #ccc;
+  border: 2px solid #ff9902;
+  border-radius: 5px;
   margin-right: 2%;
+}
+.contacts-text {
+  margin-left: 50%;
+}
+.contacts-text__heading {
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: block;
+}
+.cont_ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 .footer {
   background-color: #2d2d2e;
@@ -907,23 +871,31 @@ footer {
     width: auto;
   }
   .up-header {
-    background-color: rgba(0, 0, 0, 0.34);
+    background-color: #2d2d2e;
     padding: 15px 20px 15px 20px;
-    height: 65px;
     position: relative;
   }
   .up-header__logo {
     position: absolute;
     left: 50%;
-    margin-left: -111px;
+    margin-left: -90px;
     padding-top: 0;
+    background-image: url(../img/fergus_white.png);
+    width: 180px;
+    height: 52px;
+  }
+  .up-header__logo img {
+    display: none;
+  }
+  .up-header .header-up {
+    margin-bottom: 0;
   }
   .mob_start {
     float: left;
     width: 35px;
-    height: 70px;
+    height: 51px;
     background-image: url(../img/menu.svg);
-    background-size: 35px;
+    background-size: 28px;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -941,7 +913,7 @@ footer {
     display: block;
     position: absolute;
     left: 7px;
-    top: 90px;
+    top: 76px;
     width: 200px;
     border-radius: 5px;
     padding-top: 15px;
@@ -972,7 +944,7 @@ footer {
   .header-tel {
     color: #fff;
     font-size: 25px;
-    margin-top: 13px;
+    margin-top: 6px;
     border-bottom-color: #fff;
   }
   .header-tel:hover {
@@ -1014,8 +986,83 @@ footer {
     margin-left: 0;
     width: 201%;
   }
+  .row-des {
+    margin-top: 0;
+  }
+  .row-des__text {
+    max-height: 108px;
+    overflow: hidden;
+  }
   .footer__inner {
     width: auto;
     padding: 15px 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  p {
+    font-size: 13px;
+  }
+  .header-text {
+    left: 5px;
+  }
+  .footer-left {
+    display: none;
+  }
+  .header-tel {
+    font-size: 0;
+    background-image: url(../img/phone.svg);
+    background-size: 28px;
+    width: 31px;
+    background-position: center;
+    border-bottom: none;
+    height: 50px;
+    margin-top: 0;
+    background-repeat: no-repeat;
+  }
+  .header-tel__small {
+    display: none;
+  }
+  .production-list__item {
+    width: 31.1%;
+    margin-right: 3%;
+  }
+  .production-maintext__heading {
+    font-size: 13px;
+  }
+  .aside-heading span {
+    display: none;
+  }
+  .row-des__text {
+    max-height: 98px;
+    margin: 5px 0 6px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .about-mini__figure {
+    display: none;
+  }
+  .about-text {
+    width: 100%;
+    margin-left: 0;
+  }
+  .production-list__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .production-image {
+    float: left;
+    width: 40%;
+    margin-bottom: 0;
+  }
+  .production-maintext {
+    text-align: left;
+    margin-left: 40%;
+  }
+  .production-aside {
+    display: none;
+  }
+  .cultrure-part {
+    width: 100%;
   }
 }

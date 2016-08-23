@@ -7,35 +7,57 @@
 		<div class="content about_content">
 			<?=$page['Page']['body'] ?>
 
-			<?php if(isset($this->request->params['pass'][0]) && $this->request->params['pass'][0] == 'investors'): ?>
-			<div class="form_part">
-				<form action="/pages/request" method="post" accept-charset="utf-8">
-					<fieldset>Связаться с нами</fieldset>
-					<div class="form_line">
-						<div class="form_row">
-							<div class="form_margin">
-								<input type="text" name="data[Page][fio]" placeholder="Имя...">
-							</div>	
-						</div>
-						<div class="form_row">
-							<div class="form_margin">
-								<input type="text" name="data[Page][email]" placeholder="Почта...">
-							</div>	
-						</div>
-						<div class="form_row">
-							<div class="form_margin">
-								<input type="text" name="data[Page][phone]" placeholder="Номер...">
-							</div>	
-						</div>
+		<?php if(isset($this->request->params['pass'][0]) && $this->request->params['pass'][0] == 'about'): ?>
+		<div class="h-center-heading">
+						<h4 class="h-center-heading__text">Организационная структура</h4>
 					</div>
-					<div class="form_text">
-						<textarea name="data[Page][body]" placeholder="Сообщение..."></textarea>
-					</div>
-					<div class="ov">
-						<button class="send_form" type="submit">Отправить</button>
-					</div>
-				</form>
-			</div>
+					<div class="structure">
+						<div class="structure-row structure-row--center">
+							<div class="structure-row__item">
+								<div class="structure-inner">
+									Fergus DMCC<br> (г. Дубай, ОАЭ)
+								</div>
+							</div>
+							<div class="structure-row__item">
+								<div class="structure-inner structure-inner--with-bot structure-inner--with-lineone">
+									Fergus Kazakhstan<br> Головной офис в Астане
+								</div>
+							</div>
+						</div>
+						<div class="structure-row structure-row--right">
+							<div class="structure-row__item">
+									<div class="structure-inner structure-inner--with-top structure-inner--with-bot">
+										Экспортный<br> отдел
+									</div>	
+							</div>
+							<div class="structure-row__item">
+								<div class="structure-inner structure-inner--with-top">
+									Юридический<br> отдел
+								</div>	
+							</div>
+							<div class="structure-row__item">
+								<div class="structure-inner structure-inner--with-top">
+									Финансовый<br> отдел
+								</div>	
+							</div>
+						</div>
+						<div class="structure-row structure-row--left">
+							<div class="structure-row__item">
+									<div class="structure-inner structure-inner--with-top structure-inner--with-linetwo">
+										Офис Акмолинского<br> региона
+									</div>	
+							</div>
+							<div class="structure-row__item">
+								<div class="structure-inner structure-inner--with-top">
+									Офис Костанайского<br> региона
+								</div>	
+							</div>
+							<div class="structure-row__item">
+								<div class="structure-inner structure-inner--with-top">
+									Северо-Казахстанского<br> региона
+								</div>	
+							</div>
+						</div>	
 		<?php endif ?>
 		</div>				
 	</div>

@@ -1,7 +1,6 @@
 $(document).ready(function(){
     var nav = document.querySelector('.nav');
     var mob =  document.createElement('DIV');
-
     nav.appendChild(mob);
     $(mob).addClass('mob_start');
     $('.mob_start').on('click', function () {
@@ -10,5 +9,5 @@ $(document).ready(function(){
         }else{
             $('.nav').addClass('mob_active');
         }                           
-    }); 
+    });
 });    

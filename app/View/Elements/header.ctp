@@ -22,13 +22,13 @@
 							<a href="/<?$lang?>page/about">О компании</a>
 						</li>
 						<li class="menu__item">
-							<a href="production.html">Продукция</a>
+							<a href="/<?=$lang?>category">Продукция</a>
 						</li>
 						<li class="menu__item">
 							<a href="/<?$lang?>page/scheme">Схема работы</a>
 						</li>
 						<li class="menu__item">
-							<a href="news.html">Новости</a>
+							<a href="/<?=$lang?>news">Новости</a>
 						</li>
 						<li class="menu__item <?= ($this->request->params['controller']=='pages' && $this->request->params['action']=='contacts')? "menu__item--active" : "" ?>">
 							<a href="/<?$lang?>contacts">Контакты</a>

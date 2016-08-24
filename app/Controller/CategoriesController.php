@@ -7,7 +7,7 @@ class CategoriesController extends AppController{
 	}
 
 	public function admin_index(){
-		$this->Category->locale = 'ru';
+		$this->Category->locale = array('ru', 'en');
 		$this->Category->bindTranslation(array(
 			'title' => 'titleTranslation'
 		));
@@ -95,7 +95,18 @@ class CategoriesController extends AppController{
 		return $this->redirect($this->referer());
 	}
 
-	public function index($id){
+	public function index(){
+		$this->Category->locale = Configure::read('Config.language');
+		$this->Category->bindTranslation(array('title' => 'titleTranslation'));
+		$data = $this->Category->find('all');
+		$aside = $this->Category->find('all');
+		$title_for_layout = __('Продукция');
+		// $meta['keywords'] = $post['Category']['keywords'];
+		// $meta['description'] = $post['Category']['description'];
+		$this->set(compact('data', 'aside', 'title_for_layout' ,'meta'));
+	}
+
+	public function view($id){
 		if(is_null($id) || !(int)$id || !$this->Category->exists($id)){
 			throw new NotFoundException('Такой страницы нет...');
 		}

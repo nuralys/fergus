@@ -7,7 +7,6 @@
 		<?= $title['locale'] .': '. $title['content']; ?><br>
 	<?php endforeach; ?></td> 
 		<td><a href="/admin/categories/edit/<?=$item['Category']['id']?>?lang=ru"> рус</a> | 
-		<a href="/admin/categories/edit/<?=$item['Category']['id']?>?lang=kz"> каз</a> |
 		<a href="/admin/categories/edit/<?=$item['Category']['id']?>?lang=en"> анг</a>
 		</td>
 		<td><?php echo $this->Form->postLink('Удалить', array('action' => 'admin_delete', $item['Category']['id']), array('confirm' => 'Подтвердите удаление')); ?></td>

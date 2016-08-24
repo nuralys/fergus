@@ -2,12 +2,12 @@
 	<aside class="production-aside">
 		<div class="production-aside__inner">
 		<?php foreach($aside as $item): ?>
-			<a class="aside-heading" href="#"><?=$item['Category']['title']?></a>
-			<?php if($item['Product']): ?>
+			<a class="aside-heading" href="/<?=$lang?>category/<?=$item['Category']['id']?>"><?=$item['Category']['title']?></a>
+			<?php if(!empty($item['Product'])): ?>
 			<ul class="cultrure-list">
-				<?php foreach($data['Product'] as $i): ?>
+				<?php foreach($item['Product'] as $i): ?>
 				<li class="cultrure-list__li">
-					<a href="#"><?=$i['title'] ?></a>
+					<a href="/<?=$lang?>product/<?=$i['id'] ?>"><?=$i['title'] ?></a>
 				</li>	
 				<?php endforeach ?>
 			</ul>
@@ -20,17 +20,17 @@
 				<h1 class="h-heading__text">Продукция</h1>
 		</div>
 		<ul class="culture-ul">
-			<?php foreach($data['Product'] as $item): ?>
+			<?php foreach($data as $item): ?>
 			<li class="culture-ul__row">
 				<figure class="row-figure">
-						<img src="/img/product/thumbs/<?=$item['img']?>" >
+						<img src="/img/category/thumbs/<?=$item['Category']['img']?>" >
 				</figure>
 				<div class="row-des">
 					<a class="row-des__heading" href="#">
-						<?=$item['title'] ?>
+						<?=$item['Category']['title'] ?>
 					</a>
-					<p class="row-des__text"><?= $this->Text->truncate(strip_tags($item['body']), 193, array('ellipsis' => '...', 'exact' => true)) ?></p>
-					<a class="btn" href="/product/<?=$item['id']?>">Подробнее</a>
+					<p class="row-des__text"><?= $this->Text->truncate(strip_tags($item['Category']['body']), 193, array('ellipsis' => '...', 'exact' => true)) ?></p>
+					<a class="btn" href="/category/<?=$item['Category']['id']?>">Подробнее</a>
 				</div>
 			</li>
 			<?php endforeach ?>

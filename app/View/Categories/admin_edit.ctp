@@ -8,6 +8,7 @@ echo $this->Form->input('title', array('label' => 'Название:'));
 if(isset($this->request->query['lang']) && $this->request->query['lang'] == 'ru'):
 	echo $this->Form->input('img', array('label' => 'Логотип:', 'type' => 'file'));
 endif;
+echo $this->Form->input('body', array('label' => 'Текст:', 'id' => 'editor'));
 ?>
 	<div class="edit_bot">
 		<div class="bot_r">
@@ -15,3 +16,6 @@ endif;
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	 CKEDITOR.replace( 'editor' );
+</script>

@@ -36,7 +36,7 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="header-text">
+			<div class="header-text wow fadeInUp">
 					<h1 class="header-text__h1">
 							Закупка и экспорт<br> 
 							<span>сельскохозяйственной продукции</span>

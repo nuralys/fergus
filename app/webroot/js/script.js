@@ -1,18 +1,13 @@
 $(document).ready(function(){
-    $('.search').click(function(e) {
-    var $message = $('.s_input');
-    if ($message.css('display') != 'block') {
-        $message.show();
- 
-        var firstClick = true;
-        $(document).bind('click.myEvent', function(e) {
-            if (!firstClick && $(e.target).closest('.s_input').length == 0) {
-                $message.hide();
-                $(document).unbind('click.myEvent');
-            }
-            firstClick = false;
-        });
-    }
-    e.preventDefault();
+    var nav = document.querySelector('.nav');
+    var mob =  document.createElement('DIV');
+    nav.appendChild(mob);
+    $(mob).addClass('mob_start');
+    $('.mob_start').on('click', function () {
+        if($('.nav').hasClass('mob_active')){
+            $('.nav').removeClass('mob_active');
+        }else{
+            $('.nav').addClass('mob_active');
+        }                           
     });
 });    

@@ -3693,6 +3693,7 @@ footer {
 }
 .news-content {
   margin-bottom: 25px;
+  overflow: hidden;
 }
 .news-content img {
   float: left;
@@ -3824,7 +3825,6 @@ footer {
 @media screen and (max-width: 1080px) {
   .header {
     padding: 24.6% 0;
-    background-image: url(../img/header_mobile.jpg);
     height: auto;
     background-size: cover;
     position: relative;
@@ -3893,7 +3893,7 @@ footer {
   }
   .menu__item {
     float: none;
-    margin-right: 0;
+    margin-left: 0;
     text-align: center;
     margin-bottom: 10px;
   }
@@ -4105,8 +4105,11 @@ footer {
     width: 40%;
   }
   .structure-inner--with-lineone:before {
-    left: -42%;
-    width: 168%;
+    left: -50%;
+    width: 202%;
+  }
+  .structure-row {
+    margin-right: -10px;
   }
   .structure-inner {
     font-size: 12px;

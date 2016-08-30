@@ -1,7 +1,7 @@
 <div class="cr ov">
 	<div class="ov">
-		<div class="h_heading">
-			<h1><?=$title_for_layout?></h1>
+		<div class="h-heading">
+			<h1 class="h-heading__text"><?=$title_for_layout?></h1>
 		</div>
 		
 		<div class="content about_content">

@@ -153,4 +153,13 @@ class PagesController extends AppController {
 		$this->set(compact('title_for_layout'));
 	}
 
+	public function purchase(){
+		$title_for_layout = "Закупки";
+		$this->set(compact('title_for_layout'));
+	}
+	public function scheme(){
+		$title_for_layout = "Схема работы";
+		$this->set(compact('title_for_layout'));
+	}
+
 }

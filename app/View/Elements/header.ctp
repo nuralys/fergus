@@ -25,7 +25,10 @@
 							<a href="/<?=$lang?>category">Продукция</a>
 						</li>
 						<li class="menu__item">
-							<a href="/<?$lang?>page/scheme">Схема работы</a>
+							<a href="/<?$lang?>scheme">Схема работы</a>
+						</li>
+						<li class="menu__item">
+							<a href="/<?$lang?>purchase">Закупки</a>
 						</li>
 						<li class="menu__item">
 							<a href="/<?=$lang?>news">Новости</a>

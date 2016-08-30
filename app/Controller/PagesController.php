@@ -20,16 +20,17 @@ class PagesController extends AppController {
 		$this->Page->bindTranslation(array('title' => 'titleTranslation', 'body' => 'bodyTranslation'));
 		
 		$main = $this->Page->findById(1);
-		// debug($companies);
+		$partners = $this->Partner->find('all');
+		
 		// $page = $this->Page->findById(1);
 		// if(!$page){
 		// 	throw new NotFoundException("Такой страницы нету");
 		// }
 		
-		// $title_for_layout = $page['Page']['title'];
+		$title_for_layout = __('Fergus - Закупка и экспорт сельскохозяйственной продукции');
 		// $meta['keywords'] = $page['Page']['keywords'];
 		// $meta['description'] = $page['Page']['description'];
-		$this->set(compact('main', 'title_for_layout', 'meta', 'news', 'companies'));
+		$this->set(compact('main', 'title_for_layout', 'meta', 'news', 'partners'));
 	}    
 
 	public function page($page_alias = null){

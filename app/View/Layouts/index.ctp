@@ -2,9 +2,15 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Fergus</title>
+		<title><?php echo $title_for_layout ?></title>
 		<link href="/css/style.css" rel="stylesheet" type="text/css">
 		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1">
+    <?php if(isset($meta['keywords'])): ?>
+      <meta name="keywords" content="<?=$meta['keywords']?>">
+    <?php endif; ?>
+    <?php if(isset($meta['description'])): ?>
+      <meta name="description" content="<?=$meta['description']?>">
+    <?php endif; ?>
 	</head>
 	<body>
 		<div class="wrapper">

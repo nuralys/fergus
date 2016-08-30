@@ -40,7 +40,7 @@ class Partner extends AppModel{
 		if(!move_uploaded_file($file['img']['tmp_name'], $path)){
 			return false;
 		}
-		$this->resizeImg($path, $path_th, 108, 72, $ext);
+		$this->resizeImg($path, $path_th, 107, 49, $ext);
 		$this->data[$this->alias]['img'] = $fileName;
 		return true;
 	}

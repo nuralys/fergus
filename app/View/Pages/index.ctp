@@ -7,9 +7,9 @@
 			<h4 class="h-heading__text">О компании</h4>
 		</div>
 		<p class="about-text__p">
-			ТОО «Fergus Kazakhstan» основана 9 февраля 2015 года в г. Астана, Республика Казахстан. Основной детальностью компании является экспорт зерновых, масличных и бобовых культур как пшеница, ячмень, рапс, лен и т.д. Штат компании состоит из квалифицированных сотрудников имеющих богатый опыт в данной отрасли. За столь короткий промежуток времени ТОО «Fergus Kazakhstan» смог стать одним из ключевых игроков в зерновом рынке Казахстана.  
+			<?= $this->Text->truncate(strip_tags($main['Page']['body']), 470, array('ellipsis' => '...', 'exact' => true)) ?>
 		</p>
-		<a class="btn" href="#">Подробнее</a>
+		<a class="btn" href="/<?=$lang?>page/about">Подробнее</a>
 	</div>	
 </div>
 <div class="production-main">
@@ -63,26 +63,16 @@
 		<h4 class="h-heading__text">Наши партнеры</h4>
 	</div>
 	<div class="partners-slider">
+		<?php foreach($partners as $item): ?>
 		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner1.jpg">
+		<?php if($item['Partner']['link']): ?>
+			<a href="<?=$item['Partner']['link']?>">
+		<?php endif ?>
+			<img class="partner-slide__img" src="/img/partner/thumbs/<?=$item['Partner']['img']?>">
+		<?php if($item['Partner']['link']): ?>
+			</a>
+		<?php endif ?>
 		</div>
-		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner2.jpg">
-		</div>
-		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner3.jpg">
-		</div>
-		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner1.jpg">
-		</div>
-		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner2.jpg">
-		</div>
-		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner3.jpg">
-		</div>
-		<div class="partner-slide">
-			<img class="partner-slide__img" src="img/partner1.jpg">
-		</div>
+	<?php endforeach ?>
 	</div>
 </div>
